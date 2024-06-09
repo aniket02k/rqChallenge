@@ -14,8 +14,15 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-logging'
     implementation 'javax.inject:javax.inject:1'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.10.0'
+    testImplementation 'io.rest-assured:spring-web-test-client:5.1.1'
+    testImplementation group: 'com.squareup.okhttp3', name: 'mockwebserver', version: '4.10.0'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
 }
 
 test {
